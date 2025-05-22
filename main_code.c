@@ -37,7 +37,7 @@ int countStudentsInRoom(int room) {
 
 // Read student data and auto-assign rooms
 void readDataAndAssignRooms() {
-    FILE *fp = fopen("C:\\Users\\visma\\Desktop\\C Programming\\JOB Project\\data.csv", "r");
+    FILE *fp = fopen("C:\\Users\***\\data.csv", "r");
     if (!fp) {
         printf("Could not open CSV file.\n");
         exit(1);
@@ -148,7 +148,7 @@ void replaceStudentInRoom() {
     students[toIndex].examRoom = roomFrom;
 
     // Log the change
-    FILE *log = fopen("C:\\Users\\visma\\Desktop\\C Programming\\JOB Project\\updated_allotment.csv", "a");
+    FILE *log = fopen("C:\\Users\\***\\updated_allotment.csv", "a");
     if (log) {
         fprintf(log, "Swapped: %s (Roll %d) [Room %d] with %s (Roll %d) [Room %d]\n",
                 students[fromIndex].name, rollFrom, roomFrom,
@@ -179,7 +179,7 @@ void undoLastReplacement() {
     students[toIndex].examRoom = lastSwap.roomTo;
     undoAvailable = 0;
 
-    FILE *log = fopen("C:\\Users\\visma\\Desktop\\C Programming\\JOB Project\\session_log.txt", "a");
+    FILE *log = fopen("C:\\Users***\\session_log.txt", "a");
     if (log) {
         fprintf(log, "Undo: Restored %d to Room %d, %d to Room %d\n",
                 lastSwap.rollFrom, lastSwap.roomFrom,
@@ -192,7 +192,7 @@ void undoLastReplacement() {
 
 // Save updated data to CSV
 void saveUpdatedData() {
-    FILE *fp = fopen("C:\\Users\\visma\\Desktop\\C Programming\\JOB Project\\updated_allotment.csv", "w");
+    FILE *fp = fopen("C:\\Users\\***\\updated_allotment.csv", "w");
     if (!fp) {
         printf("Failed to write updated data.\n");
         return;
