@@ -242,7 +242,7 @@ int main() {
         while(getchar() != '\n');
     }
 
-    readDataAndAssignRooms();
+    readDataAndAssignRooms(); //lines for testing
 
     int choice;
     do {
@@ -275,5 +275,6 @@ int main() {
 
     return 0;
 }
+
 
 
